@@ -1,0 +1,80 @@
+<html>
+	<head>		
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<link href="style/style.css" rel="stylesheet">
+		<link href="style/bootstrap.min.css" rel="stylesheet">
+		<title>Sliding Puzzle Quiz</title>
+	</head>
+	<body onload="changeLevel(3,3);" background='images/cloudy-day.png'>
+	<div class="container">
+	<div style="text-align:center">
+		<h2>Tile Game </h2>
+	</div>
+	<br/><br/>
+
+		<div class="container">	
+
+		<div class="row">
+			<div class="col-md-3">
+                  <div class="leftNav" id="divmoveCount">
+					   <img src='images/moves.svg'/>
+					  Moves: <label id='moveCount'>
+				  </div>
+				  <div class="leftNav" id='divTimer'>
+					  <img src='images/timer.png'/>
+					  <label id='timer'><time>00:00:00</time></label>
+				  </div>
+				  <br/>
+				  <br/>
+				  <div class="leftNav" id='divnewGame'>
+					  <div id='newGame'>  
+						  <button class="btn btn-success" onclick="changeLevel(3,3);">New Game </button>
+					</div>
+				  </div>
+				  <div class="leftNav" id='divshuffle'>
+					  <div id='shuffle'>  
+						  <button class="btn btn-success" onclick="puzzle(3,3);">Shuffle </button>
+					</div>
+				  </div>
+			</div>
+			<div class="col-md-6">
+	
+			<div id="tileContainer"></div>
+			</div>
+			
+			<div class="col-md-3 jumbotron">
+				 <img src='images/movement.svg'/>
+              Your Moves: <br/><br/>
+
+			  <div id="moves">
+
+			  </div>
+			</div>
+		</div>
+		</div>
+		<br/><br/>		
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3">
+				Difficulty Level : <label id='difficultyLevel'></label>
+			</div>
+			<div class="col-md-6">
+				 <button class="btn btn-primary" id = "Easy" onclick="changeLevel(3,3);">Easy </button>
+	            <button class="btn btn-warning" id = "Medium" onclick="changeLevel(4,3);">Medium </button>
+		        <button class="btn btn-danger"  id = "Hard" onclick="changeLevel(4,4);">Hard</button>          	   
+		</div>
+		<div class="col-md-3"></div>
+	</div>
+			</div>
+			<div class="overlay is-hidden" id="overlay">
+			<div class="modal-content">
+				<span class="button-close" onclick="closeModal();"></span>
+				<h3>Hurray!! You have won the Game!!</h3>
+				 <p> <img src='images/won.gif'/></p>
+			</div>
+		</div>
+			<br/><br/>
+	</body>
+	<script src='scripts/tilegame.js'></script>
+	<script src='scripts/timer.js'></script>
+</html>
