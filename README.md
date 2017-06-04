@@ -2,11 +2,13 @@
 
 
 Welcome to Tile Game!
+This Game is created using vanilla Javascript and Bootstrap CSS.
+You can use any styling library or even plain CSS.
 
-//To open and run the Game:
+To open and run the Game:
 Open tilegame.html in any comfortable browser.
 
-//To Play:
+To Play:
  * Re-arrange the numbers in ascending order with the blank cell at the lower right. 
  * A numbered tile can only move if it is horizontally or vertically adjacent to the blank cell.
  * Each movement of a tile counts as a single move.
